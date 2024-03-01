@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {ref} from 'vue'
+import { ref } from 'vue'
 let num = ref(0)
+defineProps(['amount'])
 </script>
 <template>
-<button>
-    {{ num }}
-</button>
+    <button @click="num+=amount">
+        {{ num }}
+    </button>
 </template>
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
