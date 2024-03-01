@@ -5,10 +5,12 @@ let str = "hi"
 <template>
 <header class="GLASSlOLLIPOPS_header">
     <h1 style="margin-left: 30px;">
-        Vue
+        <a href="https://andreyka101.github.io/collection-of-all-lessons/">
+            Vue
+        </a>
     </h1>
 </header>
-<div class="GLASSlOLLIPOPS_div">
+<div class="GLASSlOLLIPOPS_div" style="height: 1000px;;">
     <h3>
         простые примеры
     </h3>
@@ -32,6 +34,14 @@ let str = "hi"
 </template>
 
 <style scoped lang="scss">
+h1 a{
+    text-decoration: none;
+    color: black;
+    
+}
+h1 a:hover{
+    color: #373737;
+}
 .GLASSlOLLIPOPS_div{
     h3{
         display: flex;
