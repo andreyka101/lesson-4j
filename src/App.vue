@@ -1,5 +1,6 @@
 <script setup lang="ts">
 let str = "hi"
+let num = 0
 </script>
 
 <template>
@@ -10,7 +11,7 @@ let str = "hi"
         </a>
     </h1>
 </header>
-<div class="GLASSlOLLIPOPS_div" style="height: 1000px;;">
+<div class="GLASSlOLLIPOPS_div">
     <h3>
         простые примеры
     </h3>
@@ -26,9 +27,14 @@ let str = "hi"
         <span class="title">
             пример 2
         </span>
-        <button  class="GLASSlOLLIPOPS_button">
-            tytfff
-        </button>
+        <div>
+            <button @click="num++" class="GLASSlOLLIPOPS_button">
+                {{num}}
+            </button>
+            <button @click="num++" class="GLASSlOLLIPOPS_button">
+                {{num}}
+            </button>
+        </div>
     </span>
 </div>
 </template>
