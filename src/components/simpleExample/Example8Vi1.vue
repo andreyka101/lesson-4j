@@ -21,28 +21,28 @@ export default{
     },
     // Это все Хуки жизненного цикла :
     beforeCreate() {
-        console.log("beforeCreate  /",new Date)
+        console.log("beforeCreate  /", Date.now())
     },
     created() {
-        console.log("create  /",new Date)
+        console.log("create  /", Date.now())
     },
     beforeMount() {
-        console.log("beforeMount  /",new Date)
+        console.log("beforeMount  /", Date.now())
     },
     mounted() {
-        console.log("mounted  /",new Date)
+        console.log("mounted  /", Date.now())
     },
     beforeUpdate() {
-        console.log("beforeUpdate  /",new Date)
+        console.log("beforeUpdate  /", Date.now())
     },
     updated() {
-        console.log("update  /",new Date)
+        console.log("update  /", Date.now())
     },
     beforeUnmount() {
-        console.log("beforeUnmount  /",new Date)
+        console.log("beforeUnmount  /", Date.now())
     },
     unmounted() {
-        console.log("unmounted  /",new Date)
+        console.log("unmounted  /", Date.now())
     },
 }
 </script>
