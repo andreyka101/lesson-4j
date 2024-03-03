@@ -2,7 +2,10 @@
 import { ref } from 'vue'
 import buttonPlus1 from './components/simpleExample/Example3Vi1.vue'
 import buttonPlus2 from './components/simpleExample/Example3Vi2.vue'
-import divBlock from './components/simpleExample/Example4Vi1.vue'
+import divBlock from './components/simpleExample/Example4,5Vi1.vue'
+import buttonDataPlus from './components/simpleExample/Example6Vi1.vue'
+import example7 from './components/simpleExample/Example7Vi1.vue'
+import example8 from './components/simpleExample/Example8Vi1.vue'
 let str = "hi"
 let num = ref(0)
 </script>
@@ -20,6 +23,7 @@ let num = ref(0)
             простые примеры
         </h3>
         <div style="display: flex;align-items: flex-start;justify-content: center;flex-wrap: wrap;">
+            <!-- ANCHOR - пример 1 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 1
@@ -28,6 +32,7 @@ let num = ref(0)
                     {{ str }}
                 </span>
             </span>
+            <!-- ANCHOR - пример 2 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 2
@@ -51,6 +56,7 @@ let num = ref(0)
                     </div>
                 </div>
             </span>
+            <!-- ANCHOR - пример 3 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 3
@@ -72,6 +78,7 @@ let num = ref(0)
                     </div>
                 </div>
             </span>
+            <!-- ANCHOR - пример 4 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 4
@@ -81,6 +88,7 @@ let num = ref(0)
                     text
                 </divBlock>
             </span>
+            <!-- ANCHOR - пример 5 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 5
@@ -96,12 +104,41 @@ let num = ref(0)
                     </span>
                 </divBlock>
             </span>
+            <!-- ANCHOR - пример 6 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
-                    пример 1
+                    пример 6
                 </span>
-                
-                
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <span>
+                        +3
+                    </span>
+                    <buttonDataPlus class="GLASSlOLLIPOPS_button" />
+                </div>
+            </span>
+            <!-- ANCHOR - пример 7 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 7
+                </span>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <span>
+                        пуск
+                    </span>
+                    <example7 class="GLASSlOLLIPOPS_button" />
+                </div>
+            </span>
+            <!-- ANCHOR - пример 8 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 8
+                </span>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <span>
+                        смотри в консоль
+                    </span>
+                    <example8 class="GLASSlOLLIPOPS_button" />
+                </div>
             </span>
         </div>
     </div>
@@ -135,4 +172,4 @@ h1 a:hover {
     }
 }
 </style>
-<!-- 1.19 -->
+<!-- 1.37 -->./components/simpleExample/Example4,5Vi1.vue

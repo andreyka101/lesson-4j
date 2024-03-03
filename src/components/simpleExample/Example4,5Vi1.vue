@@ -13,8 +13,4 @@
     padding: 5px;
     border-radius: 5px;
 }
-.red4V{
-    color: red;
-
-}
 </style>
