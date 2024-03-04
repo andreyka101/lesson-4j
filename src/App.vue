@@ -6,9 +6,20 @@ import divBlock from './components/simpleExample/Example4,5Vi1.vue'
 import buttonDataPlus from './components/simpleExample/Example6Vi1.vue'
 import example7 from './components/simpleExample/Example7Vi1.vue'
 import example8 from './components/simpleExample/Example8Vi1.vue'
+import example11 from './components/simpleExample/Example11Vi1.vue'
+import example11u2 from './components/simpleExample/Example11Vi2.vue'
 let str = "hi"
 let num = ref(0)
+let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
+let yesNo = ref(false)
+let url = ref('https://andreyka101.github.io/lesson-1j/')
+let str12 = ref('ссылка 1')
 </script>
+
+<!-- NOTE - запомни :
+    вместо v-on: можно писать @ ;
+    вместо v-bind: можно писать : ;
+-->
 
 <template>
     <header class="GLASSlOLLIPOPS_header">
@@ -140,6 +151,68 @@ let num = ref(0)
                     <example8 class="GLASSlOLLIPOPS_button" />
                 </div>
             </span>
+            <!-- ANCHOR - пример 9 -->
+            <span v-bind:class="nameClass">
+                <span class="title">
+                    пример 9
+                </span>
+                <span>
+                    v - bind : class
+                </span>
+            </span>
+            <!-- ANCHOR - пример 10 -->
+            <span v-bind:class="nameClass">
+                <span class="title">
+                    пример 10
+                </span>
+                <span>
+                    {{ yesNo ? 'YES' : 'NO' }}
+                </span>
+                <button @click="yesNo = true" class="GLASSlOLLIPOPS_button">
+                    клик
+                </button>
+            </span>
+            <!-- ANCHOR - пример 11 -->
+            <span  class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 11
+                </span>
+                <span>
+                    модификаторы
+                </span>
+                <div>
+                    <span class="GLASSlOLLIPOPS_span spanFlex">
+                        <span>
+                            once
+                        </span>
+                        <example11  class="GLASSlOLLIPOPS_button" />
+                    </span>
+                    <span class="GLASSlOLLIPOPS_span spanFlex">
+                        <span>
+                            right
+                        </span>
+                        <example11u2  class="GLASSlOLLIPOPS_button" />
+                    </span>
+                </div>
+            </span>
+            <!-- ANCHOR - пример 12 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 12
+                </span>
+                <span>
+                    изменение ссылки
+                </span>
+                <div>
+                    <!-- ещё можно писать :href -->
+                    <a v-bind:href="url" class="GLASSlOLLIPOPS_a">
+                        {{str12}}
+                    </a>
+                    <button @click="url='https://andreyka101.github.io/lesson-2j/' , str12='ссылка 2'" class="GLASSlOLLIPOPS_button">
+                        изменить url
+                    </button>
+                </div>
+            </span>
         </div>
     </div>
 </template>
@@ -172,4 +245,4 @@ h1 a:hover {
     }
 }
 </style>
-<!-- 1.37 -->./components/simpleExample/Example4,5Vi1.vue
+<!-- 0.27 -->
