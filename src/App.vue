@@ -8,12 +8,15 @@ import example7 from './components/simpleExample/Example7Vi1.vue'
 import example8 from './components/simpleExample/Example8Vi1.vue'
 import example11 from './components/simpleExample/Example11Vi1.vue'
 import example11u2 from './components/simpleExample/Example11Vi2.vue'
+import example13 from './components/simpleExample/Example13Vi1.vue'
 let str = "hi"
 let num = ref(0)
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
 let url = ref('https://andreyka101.github.io/lesson-1j/')
 let str12 = ref('ссылка 1')
+let num14 = ref(0)
+let letters = ref(['q','w','e','r','t','y'])
 </script>
 
 <!-- NOTE - запомни :
@@ -211,6 +214,55 @@ let str12 = ref('ссылка 1')
                     <button @click="url='https://andreyka101.github.io/lesson-2j/' , str12='ссылка 2'" class="GLASSlOLLIPOPS_button">
                         изменить url
                     </button>
+                </div>
+            </span>
+            <!-- ANCHOR - пример 13 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 13
+                </span>
+                <span>
+                    количество кликов
+                </span>
+                <div style="display: flex;">
+                    <div style="display: flex;flex-direction: column;align-items: center;">
+                        <span>
+                            v1
+                        </span>
+                        <example13 class="GLASSlOLLIPOPS_button"/>
+                    </div>
+                    <div style="display: flex;flex-direction: column;align-items: center;">
+                        <span>
+                            v2
+                        </span>
+                        <example13 class="GLASSlOLLIPOPS_button"/>
+                    </div>
+                </div>
+            </span>
+            <!-- ANCHOR - пример 14 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 14
+                </span>
+                <span v-if="num14==5">
+                    ооо круто пять
+                </span>
+                <span v-else>
+                    это не пять😞
+                </span>
+                <button @click="num14++" class="GLASSlOLLIPOPS_button">
+                    {{ num14 }}
+                </button>
+            </span>
+            <!-- ANCHOR - пример 15 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 15
+                </span>
+                <div>
+                    <span v-for="i in letters" class="GLASSlOLLIPOPS_span">
+                        {{ i }}
+                    </span>
                 </div>
             </span>
         </div>
