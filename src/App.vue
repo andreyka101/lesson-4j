@@ -1,6 +1,7 @@
 <script setup lang="ts">
+
 import { ref } from 'vue'
-import buttonPlus1 from './components/simpleExample/Example3Vi1.vue'
+import buttonPlus1 from './components/simpleExample/Example3Vi1N.vue'
 import buttonPlus2 from './components/simpleExample/Example3Vi2.vue'
 import divBlock from './components/simpleExample/Example4,5Vi1.vue'
 import buttonDataPlus from './components/simpleExample/Example6Vi1.vue'
@@ -311,4 +312,4 @@ h1 a:hover {
     }
 }
 </style>
-<!-- 0.10 -->
+<!-- 0.10 -->./components/simpleExample/Example3Vi1N.vue
