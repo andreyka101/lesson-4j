@@ -17,6 +17,7 @@ let url = ref('https://andreyka101.github.io/lesson-1j/')
 let str12 = ref('ссылка 1')
 let num14 = ref(0)
 let letters = ref(['q','w','e','r','t','y'])
+let str16 = ref('')
 </script>
 
 <!-- NOTE - запомни :
@@ -265,6 +266,19 @@ let letters = ref(['q','w','e','r','t','y'])
                     </span>
                 </div>
             </span>
+            <!-- ANCHOR - пример 16 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 16
+                </span>
+                <span style="margin-bottom: 6px;">
+                    {{ str16 }}
+                </span>
+                <input v-model="str16" type="text" class="GLASSlOLLIPOPS_input">
+                <button @click="str16 = str16 + ' x_x '" class="GLASSlOLLIPOPS_button">
+                    + x_x
+                </button>
+            </span>
         </div>
     </div>
 </template>
@@ -297,4 +311,4 @@ h1 a:hover {
     }
 }
 </style>
-<!-- 0.27 -->
+<!-- 0.2 -->
