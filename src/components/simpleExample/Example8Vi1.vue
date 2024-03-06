@@ -1,5 +1,5 @@
 <template>
-    <button id="but" @click="num++ , fun()">
+    <button v-if="num!=3" id="but" @click="num++">
         {{ num }}
     </button>
 </template>
@@ -7,17 +7,11 @@
 export default{
     data(){
         return{
-            num:0
+            num:0,
         }
     },
     methods:{
-        fun(){
-            let button = document.querySelector("#but") as HTMLButtonElement
-            // console.log(button?.textContent)
-            if (button?.textContent == '3'){
-                button.style.display = "none"
-            }
-        }
+        
     },
     // Это все Хуки жизненного цикла :
     beforeCreate() {
