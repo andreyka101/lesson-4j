@@ -312,4 +312,4 @@ h1 a:hover {
     }
 }
 </style>
-<!-- 0.10 -->./components/simpleExample/Example3Vi1N.vue
+<!-- 0.40 -->
