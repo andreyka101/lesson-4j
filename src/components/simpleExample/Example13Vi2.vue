@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {ref , computed} from 'vue'
-const num = ref(0)
+const num = ref(1)
 const numberTranslation = computed(()=>{
     return num.value == 1 ? 'один' : 'два'
 })
