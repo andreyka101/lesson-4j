@@ -1,31 +1,21 @@
 <script lang="ts">
 import { createRouter, createWebHistory } from 'vue-router'
-export default{
-    data(){
-        return{
-            num:0
-        }
-    },
-    // создание методов 
-    methods:{
-        funPlus(){
-            this.num++
-        }
-    }
-}
+export default{}
 </script>
 
 
 <template>
-        <div style="display: flex; justify-content: space-between;">
-        <RouterLink to="/" class="GLASSlOLLIPOPS_a" style="margin: 30px;">exit</RouterLink>
-    </div>
-    <div class="GLASSlOLLIPOPS_div" style="text-align: center;">
-        <button @click="funPlus">
-            {{ num }}
-        </button>
-    </div>
+<div class="GLASSlOLLIPOPS_div" style="text-align: center;">
+    <p>
+        для создания  страниц vue нужно использовать router
+    </p>
+    <p>
+        здесь нет кнопки назад , чтоб ты увил пре переходах страница не перезагружается , даже фон не меняется
+    </p>
+</div>
 
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>

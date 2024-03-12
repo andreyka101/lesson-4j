@@ -1,7 +1,10 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
+// Example18 router
 import { createRouter, createWebHistory } from 'vue-router'
+// Example19 pinia
+import { createPinia } from 'pinia'
 import buttonPlus1 from '../components/simpleExample/Example3Vi1.vue'
 import buttonPlus2 from '../components/simpleExample/Example3Vi2.vue'
 import divBlock from '../components/simpleExample/Example4,5Vi1.vue'
@@ -290,26 +293,26 @@ let str16 = ref('')
                 </span>
                 <Example17/>
             </span>
-            <!-- ANCHOR - пример 17 -->
-            <span class="GLASSlOLLIPOPS_span spanFlex">
-                <span class="title">
-                    пример 17
-                </span>
-                <span>
-                    router
-                </span>
-                <!-- помни ты всегда находишься в App.vue -->
-                <RouterLink to="/example17" class="GLASSlOLLIPOPS_a">
-                    ссылка vue
-                </RouterLink>
-            </span>
             <!-- ANCHOR - пример 18 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 18
                 </span>
+                <span>
+                    router
+                </span>
+                <!-- помни ты всегда находишься в App.vue -->
                 <RouterLink to="/example18" class="GLASSlOLLIPOPS_a">
                     ссылка vue
+                </RouterLink>
+            </span>
+            <!-- ANCHOR - пример 19 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 19
+                </span>
+                <RouterLink to="/example19" class="GLASSlOLLIPOPS_a">
+                    open
                 </RouterLink>
             </span>
         </div>
@@ -344,4 +347,4 @@ h1 a:hover {
     }
 }
 </style>
-<!-- 1.02 -->../components/simpleExample/Example3Vi1.vue
+<!-- 1.18 -->

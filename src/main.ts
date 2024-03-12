@@ -5,6 +5,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 // достаю router
 import router from './router'
+// достаю pinia
+import { createPinia } from 'pinia'
 
 
 let liveBackground = new LiveBackgroundMod()
@@ -17,5 +19,8 @@ liveBackground.BackgroundPhone.LightBulbs.flashing("#ea0000")
 const app = createApp(App)
 // использую router
 app.use(router)
+
+// использую pinia
+app.use(createPinia())
 
 app.mount('#app')
