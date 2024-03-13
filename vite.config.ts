@@ -16,5 +16,18 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        // @ts-ignore
+        main: resolve(__dirname, 'index.html'),
+      }
+    }
   }
 })
+
+
+
+
+
