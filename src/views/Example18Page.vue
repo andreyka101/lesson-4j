@@ -1,6 +1,5 @@
-<script lang="ts">
+<script setup lang="ts">
 import { createRouter, createWebHistory } from 'vue-router'
-export default{}
 </script>
 
 
