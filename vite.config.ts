@@ -22,6 +22,8 @@ export default defineConfig({
       input: {
         // @ts-ignore
         main: resolve(__dirname, 'index.html'),
+        // @ts-ignore
+        s404: resolve(__dirname, '404.html'),
       }
     }
   }
