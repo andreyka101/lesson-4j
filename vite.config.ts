@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -16,5 +16,20 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        // @ts-ignore
+        main: resolve(__dirname, 'index.html'),
+        // @ts-ignore
+        s404: resolve(__dirname, '404.html'),
+      }
+    }
   }
 })
+
+
+
+
+
