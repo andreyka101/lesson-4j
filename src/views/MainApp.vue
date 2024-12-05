@@ -23,13 +23,13 @@ let yesNo = ref(false)
 let url = ref('https://andreyka101.github.io/lesson-1j/')
 let str12 = ref('ссылка 1')
 let num14 = ref(0)
-let letters = ref(['q','w','e','r','t','y'])
+let letters = ref(['q', 'w', 'e', 'r', 't', 'y'])
 let str16 = ref('')
 </script>
 
 <!-- NOTE - запомни :
-    вместо v-on: можно писать @ ;
-    вместо v-bind: можно писать : ;
+    вместо v-on: можно писать @ 
+    вместо v-bind: можно писать :
 -->
 
 <template>
@@ -46,15 +46,18 @@ let str16 = ref('')
         </h3>
         <div style="display: flex;align-items: flex-start;justify-content: center;flex-wrap: wrap;">
             <!-- ANCHOR - пример 1 -->
+            <!-- вставка текста -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 1
                 </span>
                 <span class="GLASSlOLLIPOPS_span">
+                    <!-- можно с помощью фигурных скобок вставлять переменную в html -->
                     {{ str }}
                 </span>
             </span>
             <!-- ANCHOR - пример 2 -->
+            <!-- с помощью двух кнопок меняем по разному переменную num -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 2
@@ -64,6 +67,8 @@ let str16 = ref('')
                         <span>
                             +2
                         </span>
+                        <!-- @click выполняет какое либо действие при клике -->
+                        <!-- в @click есть методы это режимы addEventListener пример написание метода: @click.left -->
                         <button @click="num += 2" class="GLASSlOLLIPOPS_button">
                             {{ num }}
                         </button>
@@ -79,6 +84,7 @@ let str16 = ref('')
                 </div>
             </span>
             <!-- ANCHOR - пример 3 -->
+            
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 3
@@ -184,7 +190,7 @@ let str16 = ref('')
                 </button>
             </span>
             <!-- ANCHOR - пример 11 -->
-            <span  class="GLASSlOLLIPOPS_span spanFlex">
+            <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 11
                 </span>
@@ -196,13 +202,13 @@ let str16 = ref('')
                         <span>
                             once
                         </span>
-                        <example11  class="GLASSlOLLIPOPS_button" />
+                        <example11 class="GLASSlOLLIPOPS_button" />
                     </span>
                     <span class="GLASSlOLLIPOPS_span spanFlex">
                         <span>
                             right
                         </span>
-                        <example11u2  class="GLASSlOLLIPOPS_button" />
+                        <example11u2 class="GLASSlOLLIPOPS_button" />
                     </span>
                 </div>
             </span>
@@ -217,9 +223,10 @@ let str16 = ref('')
                 <div>
                     <!-- ещё можно писать :href -->
                     <a v-bind:href="url" class="GLASSlOLLIPOPS_a">
-                        {{str12}}
+                        {{ str12 }}
                     </a>
-                    <button @click="url='https://andreyka101.github.io/lesson-2j/' , str12='ссылка 2'" class="GLASSlOLLIPOPS_button">
+                    <button @click="url = 'https://andreyka101.github.io/lesson-2j/', str12 = 'ссылка 2'"
+                        class="GLASSlOLLIPOPS_button">
                         изменить url
                     </button>
                 </div>
@@ -237,13 +244,13 @@ let str16 = ref('')
                         <span>
                             v1
                         </span>
-                        <example13 class="GLASSlOLLIPOPS_button"/>
+                        <example13 class="GLASSlOLLIPOPS_button" />
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: center;">
                         <span>
                             v2
                         </span>
-                        <example13u2 class="GLASSlOLLIPOPS_button"/>
+                        <example13u2 class="GLASSlOLLIPOPS_button" />
                     </div>
                 </div>
             </span>
@@ -252,7 +259,7 @@ let str16 = ref('')
                 <span class="title">
                     пример 14
                 </span>
-                <span v-if="num14==5">
+                <span v-if="num14 == 5">
                     ооо круто пять
                 </span>
                 <span v-else>
@@ -291,7 +298,7 @@ let str16 = ref('')
                 <span class="title">
                     пример 17
                 </span>
-                <Example17/>
+                <Example17 />
             </span>
             <!-- ANCHOR - пример 18 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
@@ -319,6 +326,7 @@ let str16 = ref('')
     </div>
 </template>
 
+<!-- если писать scoped то стили будут работать только в этом файле -->
 <style scoped lang="scss">
 h1 a {
     text-decoration: none;
