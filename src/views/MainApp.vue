@@ -46,7 +46,7 @@ let str16 = ref('')
         </h3>
         <div style="display: flex;align-items: flex-start;justify-content: center;flex-wrap: wrap;">
             <!-- ANCHOR - пример 1 -->
-            <!-- вставка текста -->
+            <!-- вставка переменной -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 1
@@ -84,7 +84,7 @@ let str16 = ref('')
                 </div>
             </span>
             <!-- ANCHOR - пример 3 -->
-            
+            <!-- здесь два компонента каждый из них меняет и выводит свою переменную num -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 3
@@ -94,13 +94,14 @@ let str16 = ref('')
                         <span>
                             +2
                         </span>
+                        <!-- этот не закрывающийся компонент прибавляет свою переменную на 2 -->
                         <buttonPlus2 class="GLASSlOLLIPOPS_button" />
-                        <!-- <buttonPlus1 class="GLASSlOLLIPOPS_button" :amount="2"/> -->
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: center;">
                         <span>
                             +1
                         </span>
+                        <!-- этот не закрывающийся компонент прибавляет свою переменную на 1 -->
                         <buttonPlus1 class="GLASSlOLLIPOPS_button" />
                         <!-- <buttonPlus1 class="GLASSlOLLIPOPS_button" :amount="1"/> -->
                     </div>
