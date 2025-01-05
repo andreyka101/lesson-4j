@@ -6,7 +6,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 // Example19 pinia
 import { createPinia } from 'pinia'
 import buttonPlus1 from '../components/simpleExample/Example3Vi1.vue'
-import buttonPlus2 from '../components/simpleExample/Example3Vi2.vue'
 import divBlock from '../components/simpleExample/Example4,5Vi1.vue'
 import buttonDataPlus from '../components/simpleExample/Example6Vi1.vue'
 import example7 from '../components/simpleExample/Example7Vi1.vue'
@@ -65,11 +64,11 @@ let str16 = ref('')
                 <div style="display: flex;">
                     <div style="display: flex;flex-direction: column;align-items: center;">
                         <span>
-                            +2
+                            +1
                         </span>
                         <!-- @click выполняет какое либо действие при клике -->
                         <!-- в @click есть методы это режимы addEventListener пример написание метода: @click.left -->
-                        <button @click="num += 2" class="GLASSlOLLIPOPS_button">
+                        <button @click="num++" class="GLASSlOLLIPOPS_button">
                             {{ num }}
                         </button>
                     </div>
@@ -92,10 +91,10 @@ let str16 = ref('')
                 <div style="display: flex;">
                     <div style="display: flex;flex-direction: column;align-items: center;">
                         <span>
-                            +2
+                            +1
                         </span>
                         <!-- этот не закрывающийся компонент прибавляет свою переменную на 2 -->
-                        <buttonPlus2 class="GLASSlOLLIPOPS_button" />
+                        <buttonPlus1 class="GLASSlOLLIPOPS_button" />
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: center;">
                         <span>
