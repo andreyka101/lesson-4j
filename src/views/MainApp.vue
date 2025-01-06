@@ -67,7 +67,6 @@ let str16 = ref('')
                             +1
                         </span>
                         <!-- @click выполняет какое либо действие при клике -->
-                        <!-- в @click есть методы это режимы addEventListener пример написание метода: @click.left -->
                         <button @click="num++" class="GLASSlOLLIPOPS_button">
                             {{ num }}
                         </button>
@@ -76,6 +75,7 @@ let str16 = ref('')
                         <span>
                             +1
                         </span>
+                        <!-- @click выполняет какое либо действие при клике -->
                         <button @click="num++" class="GLASSlOLLIPOPS_button">
                             {{ num }}
                         </button>
@@ -83,7 +83,7 @@ let str16 = ref('')
                 </div>
             </span>
             <!-- ANCHOR - пример 3 -->
-            <!-- здесь два компонента каждый из них меняет и выводит свою переменную num -->
+            <!-- здесь два не закрывающиихся компонента каждый из них меняет и выводит свою переменную num -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 3
@@ -93,35 +93,37 @@ let str16 = ref('')
                         <span>
                             +1
                         </span>
-                        <!-- этот не закрывающийся компонент прибавляет свою переменную на 2 -->
+                        <!-- этот не закрывающийся компонент прибавляет свою переменную на 1 -->
                         <buttonPlus1 class="GLASSlOLLIPOPS_button" />
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: center;">
                         <span>
                             +1
                         </span>
-                        <!-- этот не закрывающийся компонент прибавляет свою переменную на 1 -->
+                        <!-- у каждого компонента своя уникальная переменная num -->
                         <buttonPlus1 class="GLASSlOLLIPOPS_button" />
                         <!-- <buttonPlus1 class="GLASSlOLLIPOPS_button" :amount="1"/> -->
                     </div>
                 </div>
             </span>
             <!-- ANCHOR - пример 4 -->
+            <!-- закрывающийся компонент -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 4
                 </span>
-                <!-- передаю текст внутрь тега текст -->
+                <!-- передаю текст внутрь закрывающегося компонента -->
                 <divBlock>
                     text
                 </divBlock>
             </span>
             <!-- ANCHOR - пример 5 -->
+            <!-- закрывающийся компонент -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 5
                 </span>
-                <!-- передаю текст внутрь тега теги -->
+                <!-- передаю два span внутрь закрывающегося компонента -->
                 <divBlock>
                     <span class="GLASSlOLLIPOPS_span">
                         привет
@@ -190,6 +192,7 @@ let str16 = ref('')
                 </button>
             </span>
             <!-- ANCHOR - пример 11 -->
+            <!-- в @click есть методы это режимы addEventListener пример написание метода: @click.left -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 11
