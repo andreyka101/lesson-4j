@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-let num = ref(9)
+defineProps(['amount'])
+let num = ref(0)
 </script>
 <template>
     <button @click="num ++">
-        {{ num }}
+        {{ num + amount }}
     </button>
 </template>
