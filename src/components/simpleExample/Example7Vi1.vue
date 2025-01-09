@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { log } from 'console'
 import { ref } from 'vue'
 defineProps(['arr', 'text'])
-let num = 0
+let num = 1
 function arr_click(){
-    num++
-    
+    console.log("arr_click")
 }
 
 </script>
