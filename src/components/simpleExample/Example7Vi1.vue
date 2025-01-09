@@ -2,8 +2,9 @@
 import { log } from 'console'
 import { ref } from 'vue'
 defineProps(['arr', 'text'])
-let num = 1
+let num = ref(0)
 function arr_click(){
+    num++
     console.log("arr_click")
 }
 
