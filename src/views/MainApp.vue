@@ -136,13 +136,39 @@ let str16 = ref('')
                 </divBlock>
             </span>
             <!-- ANCHOR - пример 6 -->
+            <!-- defineProps пример 1 -->
+            <!-- компоненты example6 c помощью Props принимают переменную -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 6
                 </span>
+                <div style="display: flex;">
+                    <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
+                        1 + 5
+                        <!-- передаю компоненту число -->
+                        <example6 class="GLASSlOLLIPOPS_button" :amount="5" />
+                    </div>
+                    <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
+                        1 + num
+                        <!-- передаю компоненту значение переменной num -->
+                        <example6 class="GLASSlOLLIPOPS_button" :amount="num" />
+                    </div>
+                    <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
+                        1 + "5"
+                        <!-- если не писать (:) то передаём компоненту всегда строку -->
+                        <example6 class="GLASSlOLLIPOPS_button" amount="5" />
+                    </div>
+                </div>
+            </span>
+            <!-- ANCHOR - пример 7 -->
+            <!-- defineProps пример 2 -->
+            <!-- компоненты example6 c помощью Props принимают несколько переменных -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 7
+                </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
-                    <example6 class="GLASSlOLLIPOPS_button" :amount="5"/>
-                    <example6 class="GLASSlOLLIPOPS_button" :amount="5"/>
+                    <example7 :arr="[1,2,3]" :text="3"/>
                 </div>
             </span>
 
@@ -168,7 +194,7 @@ let str16 = ref('')
                     <span>
                         пуск
                     </span>
-                    <example7 class="GLASSlOLLIPOPS_button" />
+                    <!-- <example7 class="GLASSlOLLIPOPS_button" /> -->
                 </div>
             </span>
             <!-- ANCHOR - пример 8 -->
