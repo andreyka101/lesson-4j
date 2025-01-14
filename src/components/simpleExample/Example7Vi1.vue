@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { log } from 'console'
+import { log } from 'console';
 import { ref } from 'vue'
-defineProps(['arr', 'text'])
+const { arr } = defineProps(['arr'])
 let num = ref(0)
+let arr_loc = ref(arr)
 function arr_click(){
-    num++
-    console.log("arr_click")
+    num.value++
+    for(let i in arr){
+        arr_loc.value[i] += num
+    }
 }
 
 </script>
@@ -13,7 +16,7 @@ function arr_click(){
     <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
         arr = {{ arr }}
         <button @click="arr_click()"  class="GLASSlOLLIPOPS_button">
-            {{ arr[0] + num }}
+            {{ arr_loc }}
         </button>
     </div>
 </template>
