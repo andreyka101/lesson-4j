@@ -168,7 +168,7 @@ let str16 = ref('')
                     пример 7
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
-                    <example7 :arr="[1,2,3]" :text="3"/>
+                    <example7 :arr="[1,2,3]" :num="2"/>
                 </div>
             </span>
 
