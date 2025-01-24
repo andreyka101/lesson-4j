@@ -1,10 +1,13 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
+//FIXME - написать нормальный комментарий
 // Example18 router
 import { createRouter, createWebHistory } from 'vue-router'
 // Example19 pinia
 import { createPinia } from 'pinia'
+
+//SECTION - импортируем другие компоненты
 import buttonPlus1 from '../components/simpleExample/Example3Vi1.vue'
 import divBlock from '../components/simpleExample/Example4,5Vi1.vue'
 import example6 from '../components/simpleExample/Example6Vi1.vue'
@@ -16,7 +19,12 @@ import example11u2 from '../components/simpleExample/Example11Vi2.vue'
 import example13 from '../components/simpleExample/Example13Vi1.vue'
 import example13u2 from '../components/simpleExample/Example13Vi2.vue'
 import Example17 from '../components/simpleExample/Example17Vi1.vue'
+//!SECTION
+
+//SECTION - создание переменных
+//LINK - обычная переменная
 let str = "hi"
+//LINK - реактивные переменные создаются через ref()
 let num = ref(0)
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
@@ -25,6 +33,7 @@ let str12 = ref('ссылка 1')
 let num14 = ref(0)
 let letters = ref(['q', 'w', 'e', 'r', 't', 'y'])
 let str16 = ref('')
+//!SECTION
 </script>
 
 <!-- NOTE - запомни :
@@ -45,19 +54,20 @@ let str16 = ref('')
             простые примеры
         </h3>
         <div style="display: flex;align-items: flex-start;justify-content: center;flex-wrap: wrap;">
-            <!-- ANCHOR - пример 1 -->
-            <!-- вставка переменной -->
+            <!-- SECTION - пример 1 -->
+            <!-- ANCHOR - вставка переменной -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 1
                 </span>
                 <span class="GLASSlOLLIPOPS_span">
-                    <!-- можно с помощью фигурных скобок вставлять переменную в html -->
+                    <!-- LINK - можно с помощью фигурных скобок вставлять переменную в html -->
                     {{ str }}
                 </span>
             </span>
-            <!-- ANCHOR - пример 2 -->
-            <!-- с помощью двух кнопок меняем по разному переменную num -->
+            <!-- !SECTION -->
+            <!-- SECTION - пример 2 -->
+            <!-- ANCHOR - с помощью двух кнопок меняем по разному переменную num -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 2
@@ -67,7 +77,7 @@ let str16 = ref('')
                         <span>
                             +1
                         </span>
-                        <!-- @click выполняет какое либо действие при клике -->
+                        <!-- LINK - @click выполняет какое либо действие при клике -->
                         <button @click="num++" class="GLASSlOLLIPOPS_button">
                             {{ num }}
                         </button>
@@ -76,13 +86,14 @@ let str16 = ref('')
                         <span>
                             +1
                         </span>
-                        <!-- @click выполняет какое либо действие при клике -->
+                        <!-- LINK - @click выполняет какое либо действие при клике -->
                         <button @click="num++" class="GLASSlOLLIPOPS_button">
                             {{ num }}
                         </button>
                     </div>
                 </div>
             </span>
+            <!-- !SECTION -->
             <!-- ANCHOR - пример 3 -->
             <!-- здесь два не закрывающиихся компонента каждый из них меняет и выводит свою переменную num -->
             <span class="GLASSlOLLIPOPS_span spanFlex">

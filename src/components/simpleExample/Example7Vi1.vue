@@ -1,12 +1,32 @@
 <script setup lang="ts">
-import { log } from 'console';
 import { ref } from 'vue'
-const { arr , num } = defineProps(['arr' , 'num'])
+
+//LINK - с помощью defineProps этот компонент обязательно принимает массив и число
+// const { arr , num } = defineProps(['arr' , 'num'])
+
+//LINK - тоже самое ,но в defineProps прописаны типы
+const { arr, num = 2 } = defineProps<{
+    // обязательно принимает массив
+    arr: Array<number>
+    // не обязательно принимает число по умолчанию num = 2
+    num?: number
+}>()
+
+//LINK - тоже самое ,но defineProps сохраняем в переменную prop, все переменные вызываются через точку
+// const prop = defineProps(['arr' , 'num'])
+// console.log(prop.num)
+// console.log(prop.arr)
+
+
+
+//NOTE - создаём локальный пустой массив
 let arr_loc = ref([] as Array<number>)
+// каждый элемент массива arr копируем в массив arr_loc
 arr_loc.value = arr.slice()
-console.log(num)
-function arr_click(){
-    for(let i in arr_loc.value){
+
+// функция прибавляет num к каждому элементу массива arr_loc
+function arr_click() {
+    for (let i in arr_loc.value) {
         arr_loc.value[i] += num
     }
 }
@@ -18,7 +38,8 @@ function arr_click(){
         <p>
             num = {{ num }}
         </p>
-        <button @click="arr_click()"  class="GLASSlOLLIPOPS_button">
+        <!-- NOTE - функция вызывается при клике на кнопку -->
+        <button @click="arr_click()" class="GLASSlOLLIPOPS_button">
             {{ arr_loc }}
         </button>
     </div>

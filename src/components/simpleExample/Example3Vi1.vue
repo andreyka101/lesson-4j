@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-// локальная переменная этого компонента
+//LINK - локальная переменная этого компонента (она реактивная)
 let num = ref(0)
-//LINK -  defineProps(['amount'])
-//LINK -  1.30 в видео установка vue
+
+//LINK - получить или измить значение реактивной переменной в <script> можно только через .value
+console.log(num.value)
 </script>
-<!-- компонент возвращает все элементы которые внутри template -->
+<!-- LINK - компонент возвращает все элементы которые внутри template -->
 <template>
     <button @click="num++">
         {{ num }}
     </button>
-    <!-- <button @click="num+=amount">
-        {{ num }}
-    </button> -->
 </template>
 <style scoped lang="scss"></style>
