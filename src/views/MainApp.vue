@@ -1,3 +1,6 @@
+
+<!-- LINK - lang = язык -->
+<!-- LINK - с помощью setup при любом изменении или создании компонента будет срабатывать script -->
 <script setup lang="ts">
 
 import { ref } from 'vue'
@@ -67,7 +70,7 @@ let str16 = ref('')
             </span>
             <!-- !SECTION -->
             <!-- SECTION - пример 2 -->
-            <!-- ANCHOR - с помощью двух кнопок меняем по разному переменную num -->
+            <!-- ANCHOR - с помощью двух кнопок меняем одну переменную num -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 2
@@ -79,6 +82,7 @@ let str16 = ref('')
                         </span>
                         <!-- LINK - @click выполняет какое либо действие при клике -->
                         <button @click="num++" class="GLASSlOLLIPOPS_button">
+                            <!-- LINK - переменная num реактивная (ref()) по этому vue обрисовывает в HTML любое изменение переменной -->
                             {{ num }}
                         </button>
                     </div>
@@ -88,14 +92,15 @@ let str16 = ref('')
                         </span>
                         <!-- LINK - @click выполняет какое либо действие при клике -->
                         <button @click="num++" class="GLASSlOLLIPOPS_button">
+                            <!-- LINK - переменная num реактивная (ref()) по этому vue обрисовывает в HTML любое изменение переменной -->
                             {{ num }}
                         </button>
                     </div>
                 </div>
             </span>
             <!-- !SECTION -->
-            <!-- ANCHOR - пример 3 -->
-            <!-- здесь два не закрывающиихся компонента каждый из них меняет и выводит свою переменную num -->
+            <!-- SECTION - пример 3 -->
+            <!-- ANCHOR - здесь два не закрывающиихся компонента каждый из них меняет и выводит свою локальную переменную num -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 3
@@ -105,37 +110,38 @@ let str16 = ref('')
                         <span>
                             +1
                         </span>
-                        <!-- этот не закрывающийся компонент прибавляет свою переменную на 1 -->
+                        <!-- LINK - этот не закрывающийся компонент прибавляет свою переменную на 1 -->
                         <buttonPlus1 class="GLASSlOLLIPOPS_button" />
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: center;">
                         <span>
                             +1
                         </span>
-                        <!-- у каждого компонента своя уникальная переменная num -->
+                        <!-- LINK - у каждого компонента своя уникальная переменная num -->
                         <buttonPlus1 class="GLASSlOLLIPOPS_button" />
-                        <!-- <buttonPlus1 class="GLASSlOLLIPOPS_button" :amount="1"/> -->
                     </div>
                 </div>
             </span>
-            <!-- ANCHOR - пример 4 -->
-            <!-- закрывающийся компонент -->
+            <!-- !SECTION -->
+            <!-- SECTION - пример 4 -->
+            <!-- ANCHOR - закрывающийся компонент пример 1 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 4
                 </span>
-                <!-- передаю текст внутрь закрывающегося компонента -->
+                <!-- LINK - передаю текст внутрь закрывающегося компонента -->
                 <divBlock>
                     text
                 </divBlock>
             </span>
-            <!-- ANCHOR - пример 5 -->
-            <!-- закрывающийся компонент -->
+            <!-- !SECTION -->
+            <!-- SECTION - пример 5 -->
+            <!-- ANCHOR - закрывающийся компонент пример 2 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 5
                 </span>
-                <!-- передаю два span внутрь закрывающегося компонента -->
+                <!-- LINK - передаю два span внутрь закрывающегося компонента -->
                 <divBlock>
                     <span class="GLASSlOLLIPOPS_span">
                         привет
@@ -146,9 +152,10 @@ let str16 = ref('')
                     </span>
                 </divBlock>
             </span>
-            <!-- ANCHOR - пример 6 -->
-            <!-- defineProps пример 1 -->
-            <!-- компоненты example6 c помощью Props принимают переменную -->
+            <!-- !SECTION -->
+            <!-- SECTION - пример 6 -->
+            <!-- ANCHOR - defineProps пример 1 -->
+            <!-- LINK - компоненты example6 c помощью Props принимают переменную -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 6
@@ -156,32 +163,34 @@ let str16 = ref('')
                 <div style="display: flex;">
                     <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
                         1 + 5
-                        <!-- передаю компоненту число -->
+                        <!-- LINK - передаю компоненту число -->
                         <example6 class="GLASSlOLLIPOPS_button" :amount="5" />
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
                         1 + num
-                        <!-- передаю компоненту значение переменной num -->
+                        <!-- LINK - передаю компоненту значение переменной num -->
                         <example6 class="GLASSlOLLIPOPS_button" :amount="num" />
                     </div>
                     <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
                         1 + "5"
-                        <!-- если не писать (:) то передаём компоненту всегда строку -->
+                        <!-- LINK - если не писать (:) то передаём компоненту всегда строку -->
                         <example6 class="GLASSlOLLIPOPS_button" amount="5" />
                     </div>
                 </div>
             </span>
-            <!-- ANCHOR - пример 7 -->
-            <!-- defineProps пример 2 -->
-            <!-- компоненты example6 c помощью Props принимают несколько переменных -->
+            <!-- !SECTION -->
+            <!-- SECTION - пример 7 -->
+            <!-- ANCHOR - defineProps пример 2 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 7
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
+                    <!-- LINK - компонент example7 c помощью Props принимает обязательный массив и не обязательное число -->
                     <example7 :arr="[1,2,3]" :num="2"/>
                 </div>
             </span>
+            <!-- !SECTION -->
 
             <!-- FIXME + ========================== -->
             <!-- ANCHOR - пример 6 -->

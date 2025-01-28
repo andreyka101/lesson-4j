@@ -4,6 +4,7 @@ import { ref } from 'vue'
 //LINK - с помощью defineProps этот компонент обязательно принимает массив и число
 // const { arr , num } = defineProps(['arr' , 'num'])
 
+
 //LINK - тоже самое ,но в defineProps прописаны типы
 const { arr, num = 2 } = defineProps<{
     // обязательно принимает массив
@@ -12,6 +13,7 @@ const { arr, num = 2 } = defineProps<{
     num?: number
 }>()
 
+
 //LINK - тоже самое ,но defineProps сохраняем в переменную prop, все переменные вызываются через точку
 // const prop = defineProps(['arr' , 'num'])
 // console.log(prop.num)
@@ -19,7 +21,8 @@ const { arr, num = 2 } = defineProps<{
 
 
 
-//NOTE - создаём локальный пустой массив
+
+//NOTE - создаём локальный реактивный пустой массив
 let arr_loc = ref([] as Array<number>)
 // каждый элемент массива arr копируем в массив arr_loc
 arr_loc.value = arr.slice()
@@ -35,7 +38,7 @@ function arr_click() {
 <template>
     <div style="display: flex;flex-direction: column;align-items: center; margin: 0 10px;">
         arr = {{ arr }}
-        <p>
+        <p class="indent">
             num = {{ num }}
         </p>
         <!-- NOTE - функция вызывается при клике на кнопку -->
@@ -44,3 +47,9 @@ function arr_click() {
         </button>
     </div>
 </template>
+<style scoped lang="scss">
+    .indent{
+        margin-top: 7px;
+        margin-bottom: 5px;
+    }
+</style>
