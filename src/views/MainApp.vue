@@ -26,9 +26,9 @@ import Example17 from '../components/simpleExample/Example17Vi1.vue'
 
 //SECTION - создание переменных
 //LINK - обычная переменная
-let str = "hi"
+let str = "hi" // пример 1
 //LINK - реактивные переменные создаются через ref()
-let num = ref(0)
+let num = ref(0) // пример 2, 6
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
 let url = ref('https://andreyka101.github.io/lesson-1j/')
