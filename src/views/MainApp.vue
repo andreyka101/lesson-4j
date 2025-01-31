@@ -39,10 +39,14 @@ let str16 = ref('')
 //!SECTION
 </script>
 
+
 <!-- NOTE - запомни :
+    Атрибуты которые начинаются с (v-) называются директивы
+
     вместо v-on: можно писать @ 
     вместо v-bind: можно писать :
 -->
+
 
 <template>
     <header class="GLASSlOLLIPOPS_header">
@@ -80,8 +84,9 @@ let str16 = ref('')
                         <span>
                             +1
                         </span>
-                        <!-- LINK - @click выполняет какое либо действие при клике -->
-                        <button @click="num++" class="GLASSlOLLIPOPS_button">
+                        <!-- LINK - Атрибуты которые начинаются с (v-) называются директивы -->
+                        <!-- LINK - директива v-on:click выполняет какое либо действие при клике -->
+                        <button v-on:click="num++" class="GLASSlOLLIPOPS_button">
                             <!-- LINK - переменная num реактивная (ref()) по этому vue обрисовывает в HTML любое изменение переменной -->
                             {{ num }}
                         </button>
@@ -90,7 +95,7 @@ let str16 = ref('')
                         <span>
                             +1
                         </span>
-                        <!-- LINK - @click выполняет какое либо действие при клике -->
+                        <!-- LINK - @click тоже самое что v-on:click только короче -->
                         <button @click="num++" class="GLASSlOLLIPOPS_button">
                             <!-- LINK - переменная num реактивная (ref()) по этому vue обрисовывает в HTML любое изменение переменной -->
                             {{ num }}
