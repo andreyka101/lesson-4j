@@ -196,6 +196,23 @@ let str16 = ref('')
                 </div>
             </span>
             <!-- !SECTION -->
+            <!-- SECTION - пример 8 -->
+            <!-- ANCHOR - if -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 8
+                </span>
+                <span v-if="num14 == 5">
+                    ооо круто пять
+                </span>
+                <span v-else>
+                    это не пять😞
+                </span>
+                <button @click="num14++" class="GLASSlOLLIPOPS_button">
+                    {{ num14 }}
+                </button>
+            </span>
+            <!-- !SECTION -->
 
             <!-- FIXME + ========================== -->
             <!-- ANCHOR - пример 6 -->
