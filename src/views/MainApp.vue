@@ -286,7 +286,7 @@ let str16 = ref('')
                     пример 12
                 </span>
                 <div>
-                    <!-- v-for обрисовывает элементы на основе массива -->
+                    <!-- v-for обрисовывает элементы на основе массива (цикл) -->
                     <span v-for="i in arr12" class="GLASSlOLLIPOPS_span">
                         {{ i }}
                     </span>
