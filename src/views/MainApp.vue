@@ -1,4 +1,3 @@
-
 <!-- LINK - lang = язык -->
 <!-- LINK - с помощью setup при любом изменении или создании компонента будет срабатывать script -->
 <script setup lang="ts">
@@ -29,12 +28,16 @@ import Example17 from '../components/simpleExample/Example17Vi1.vue'
 let str = "hi" // пример 1
 //LINK - реактивные переменные создаются через ref()
 let num = ref(0) // пример 2, 6
+let num8 = ref(0) // пример 8
+let num9 = ref(0) // пример 9
+let num10 = ref(0) // пример 10
+let num11 = ref(0) // пример 11
+let arr12 = ref(['q', 'w', 'e', 'r', 't', 'y']) // пример 11
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
 let url = ref('https://andreyka101.github.io/lesson-1j/')
 let str12 = ref('ссылка 1')
 let num14 = ref(0)
-let letters = ref(['q', 'w', 'e', 'r', 't', 'y'])
 let str16 = ref('')
 //!SECTION
 </script>
@@ -192,25 +195,102 @@ let str16 = ref('')
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <!-- LINK - компонент example7 c помощью Props принимает обязательный массив и не обязательное число -->
-                    <example7 :arr="[1,2,3]" :num="2"/>
+                    <example7 :arr="[1, 2, 3]" :num="2" />
                 </div>
             </span>
             <!-- !SECTION -->
             <!-- SECTION - пример 8 -->
-            <!-- ANCHOR - if -->
+            <!-- ANCHOR - директива v-if -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 8
                 </span>
-                <span v-if="num14 == 5">
+                <!-- LINK - пока в v-if находится значение true элемент отображается в DOM -->
+                <!-- LINK - если в v-if находится значение false элемент удаляется из DOM -->
+                <span v-if="num8 < 5">
+                    v-if ({{ num8 }} < 5) 
+                </span>
+                <button @click="num8++" class="GLASSlOLLIPOPS_button">
+                    {{ num8 }}
+                </button>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 9 -->
+            <!-- ANCHOR - директива v-else -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 9
+                </span>
+                <!-- LINK - пока в v-if находится значение true элемент отображается в DOM -->
+                <!-- LINK - если в v-if находится значение false элемент удаляется из DOM -->
+                <span v-if="num9 == 5">
                     ооо круто пять
                 </span>
                 <span v-else>
+                    <!-- LINK - если v-if не сработала тогда элемент с v-else отображается в DOM -->
                     это не пять😞
                 </span>
-                <button @click="num14++" class="GLASSlOLLIPOPS_button">
-                    {{ num14 }}
+                <button @click="num9++" class="GLASSlOLLIPOPS_button">
+                    {{ num9 }}
                 </button>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 10 -->
+            <!-- ANCHOR - директива v-else -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 10
+                </span>
+                <!-- LINK - пока в v-if находится значение true элемент отображается в DOM -->
+                <!-- LINK - если в v-if находится значение false элемент удаляется из DOM -->
+                <span v-if="num10 == 1" style="color:#FF6B6BFF;">
+                    v-if num = 1
+                </span>
+                <!-- с помощью v-else-if создаём цепочку условий -->
+                <span v-else-if="num10 == 2" style="color:#FFDC6BFF;">
+                    v-else-if num = 2
+                </span>
+                <span v-else-if="num10 == 3" style="color:#8BFF6BFF;">
+                    v-else-if num = 3
+                </span>
+                <!-- LINK - если не одно v-if из цепочки условий не сработала тогда элемент с v-else отображается в DOM -->
+                <span v-else>
+                    v-else
+                </span>
+                <button @click="num10++" class="GLASSlOLLIPOPS_button">
+                    {{ num10 }}
+                </button>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 11 -->
+            <!-- ANCHOR - директива v-show -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 11
+                </span>
+                <!-- LINK - пока в v-show находится значение true элемент отображается -->
+                <!-- LINK - если в v-show находится значение false элементу присваивается значение: display: none -->
+                <!-- LINK - в отличие от v-if директива v-show не изменяет структуру DOM -->
+                <span v-show="num11 < 7">
+                    v-show ({{ num11 }} < 7) 
+                </span>
+                <button @click="num11++" class="GLASSlOLLIPOPS_button">
+                    {{ num11 }}
+                </button>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 12 -->
+            <!-- ANCHOR - директива v-for -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 12
+                </span>
+                <div>
+                    <!-- v-for обрисовывает элементы на основе массива -->
+                    <span v-for="i in arr12" class="GLASSlOLLIPOPS_span">
+                        {{ i }}
+                    </span>
+                </div>
             </span>
             <!-- !SECTION -->
 
@@ -336,32 +416,6 @@ let str16 = ref('')
                         </span>
                         <example13u2 class="GLASSlOLLIPOPS_button" />
                     </div>
-                </div>
-            </span>
-            <!-- ANCHOR - пример 14 -->
-            <span class="GLASSlOLLIPOPS_span spanFlex">
-                <span class="title">
-                    пример 14
-                </span>
-                <span v-if="num14 == 5">
-                    ооо круто пять
-                </span>
-                <span v-else>
-                    это не пять😞
-                </span>
-                <button @click="num14++" class="GLASSlOLLIPOPS_button">
-                    {{ num14 }}
-                </button>
-            </span>
-            <!-- ANCHOR - пример 15 -->
-            <span class="GLASSlOLLIPOPS_span spanFlex">
-                <span class="title">
-                    пример 15
-                </span>
-                <div>
-                    <span v-for="i in letters" class="GLASSlOLLIPOPS_span">
-                        {{ i }}
-                    </span>
                 </div>
             </span>
             <!-- ANCHOR - пример 16 -->
