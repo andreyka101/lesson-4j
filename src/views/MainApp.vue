@@ -32,7 +32,12 @@ let num8 = ref(0) // пример 8
 let num9 = ref(0) // пример 9
 let num10 = ref(0) // пример 10
 let num11 = ref(0) // пример 11
-let arr12 = ref(['q', 'w', 'e', 'r', 't', 'y']) // пример 11
+let arr12 = ref(['q', 'w', 'e', 'r', 't', 'y']) // пример 12
+let arr13 = ref([
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+]) // пример 13
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
 let url = ref('https://andreyka101.github.io/lesson-1j/')
@@ -287,8 +292,23 @@ let str16 = ref('')
                 </span>
                 <div>
                     <!-- v-for обрисовывает элементы на основе массива (цикл) -->
-                    <span v-for="i in arr12" class="GLASSlOLLIPOPS_span">
-                        {{ i }}
+                    <span v-for="el in arr12" class="GLASSlOLLIPOPS_span">
+                        {{ el }}
+                    </span>
+                </div>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 13 -->
+            <!-- ANCHOR - директива v-for -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 13
+                </span>
+                <div>
+                    <span v-for="el_arr in arr13" class="GLASSlOLLIPOPS_span" style="display: inline-flex;flex-direction: column;">
+                        <span v-for="el in el_arr" class="GLASSlOLLIPOPS_span" style="display: inline-flex;justify-content: center;align-items: center;">
+                            {{ el }}
+                        </span>
                     </span>
                 </div>
             </span>
