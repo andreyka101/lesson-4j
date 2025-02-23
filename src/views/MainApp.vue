@@ -309,9 +309,9 @@ let str16 = ref('')
                 </span>
                 <div>
                     <!-- LINK - цикл в цикле -->
-                    <span v-for="el_arr in arr13" class="GLASSlOLLIPOPS_span block_13_1">
+                    <span v-for="el_arr in arr13" class="GLASSlOLLIPOPS_span block_13">
                         <!-- LINK - v-for обрисовывает элементы на основе массива (цикл) -->
-                        <span v-for="el in el_arr" class="GLASSlOLLIPOPS_span block_13_2">
+                        <span v-for="el in el_arr" class="GLASSlOLLIPOPS_span block_s">
                             {{ el }}
                         </span>
                     </span>
@@ -340,11 +340,11 @@ let str16 = ref('')
                 <span class="title">
                     пример 15
                 </span>
-                <div class="" style="display: flex;align-items: center;">
+                <div class="block_15">
                     <!-- LINK - v-text вставляет текст внутрь элемента -->
-                    <span v-text="str15_1" class="GLASSlOLLIPOPS_span" style="width: 100px;word-break: break-all;"></span>
+                    <span v-text="str15_1" class="GLASSlOLLIPOPS_span block_s_1"></span>
                     <!-- LINK - v-html вставляет HTML внутрь элемента -->
-                    <span v-html="str15_1" class="GLASSlOLLIPOPS_span" style="margin: 2px 6px;"></span>
+                    <span v-html="str15_1" class="GLASSlOLLIPOPS_span block_s_2"></span>
                     <!-- LINK - v-html не работает с vue он вставляет только HTML -->
                     <span v-html="str15_2" class="GLASSlOLLIPOPS_span"></span>
                 </div>
@@ -549,16 +549,27 @@ h1 a:hover {
 
 
 
-.block_13_1 {
+.block_13 {
     display: inline-flex;
     flex-direction: column;
     padding: 3px;
-    .block_13_2 {
+    .block_s {
         display: inline-flex;
         justify-content: center;
         align-items: center;
         // border-color: #C5C5C5FF;
         background-color: #3b3b3b;
+    }
+}
+.block_15 {
+    display: flex;
+    align-items: center;
+    .block_s_1{
+        width: 100px;
+        word-break: break-all;
+    }
+    .block_s_2{
+        margin: 2px 6px;
     }
 }
 </style>
