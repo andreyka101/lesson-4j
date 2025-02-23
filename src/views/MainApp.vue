@@ -38,6 +38,9 @@ let arr13 = ref([
     [4,5,6],
     [7,8,9],
 ]) // пример 13
+let str14 = "i text" // пример 1
+let str15_1 = '<span style="color:#ea0000">ok</span>' // пример 1
+let str15_2 = '<button v-on:click="num++" class="GLASSlOLLIPOPS_button">{{ num }}</button>' // пример 1
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
 let url = ref('https://andreyka101.github.io/lesson-1j/')
@@ -291,7 +294,7 @@ let str16 = ref('')
                     пример 12
                 </span>
                 <div>
-                    <!-- v-for обрисовывает элементы на основе массива (цикл) -->
+                    <!-- LINK - v-for обрисовывает элементы на основе массива (цикл) -->
                     <span v-for="el in arr12" class="GLASSlOLLIPOPS_span">
                         {{ el }}
                     </span>
@@ -305,11 +308,45 @@ let str16 = ref('')
                     пример 13
                 </span>
                 <div>
-                    <span v-for="el_arr in arr13" class="GLASSlOLLIPOPS_span" style="display: inline-flex;flex-direction: column;">
-                        <span v-for="el in el_arr" class="GLASSlOLLIPOPS_span" style="display: inline-flex;justify-content: center;align-items: center;">
+                    <!-- LINK - цикл в цикле -->
+                    <span v-for="el_arr in arr13" class="GLASSlOLLIPOPS_span block_13_1">
+                        <!-- LINK - v-for обрисовывает элементы на основе массива (цикл) -->
+                        <span v-for="el in el_arr" class="GLASSlOLLIPOPS_span block_13_2">
                             {{ el }}
                         </span>
                     </span>
+                </div>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 14 -->
+            <!-- ANCHOR - директива v-text -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 14
+                </span>
+                <div style="display: flex;flex-direction: column;">
+                    <!-- LINK - v-text вставляет текст внутрь элемента -->
+                    <span v-text="str14" class="GLASSlOLLIPOPS_span"></span>
+                    <!-- LINK - вместо v-text можно писать фигурные скобки это одно и тоже -->
+                    <span class="GLASSlOLLIPOPS_span">
+                        {{ str14 }}
+                    </span>
+                </div>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 15 -->
+            <!-- ANCHOR - директива v-html -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 15
+                </span>
+                <div class="" style="display: flex;align-items: center;">
+                    <!-- LINK - v-text вставляет текст внутрь элемента -->
+                    <span v-text="str15_1" class="GLASSlOLLIPOPS_span" style="width: 100px;word-break: break-all;"></span>
+                    <!-- LINK - v-html вставляет HTML внутрь элемента -->
+                    <span v-html="str15_1" class="GLASSlOLLIPOPS_span" style="margin: 2px 6px;"></span>
+                    <!-- LINK - v-html не работает с vue он вставляет только HTML -->
+                    <span v-html="str15_2" class="GLASSlOLLIPOPS_span"></span>
                 </div>
             </span>
             <!-- !SECTION -->
@@ -491,18 +528,15 @@ h1 a {
     color: black;
 
 }
-
 h1 a:hover {
     color: #373737;
 }
-
 .GLASSlOLLIPOPS_div {
     h3 {
         display: flex;
         justify-content: center;
     }
 }
-
 .spanFlex {
     display: inline-flex;
     flex-direction: column;
@@ -510,6 +544,21 @@ h1 a:hover {
 
     .title {
         padding: 5px;
+    }
+}
+
+
+
+.block_13_1 {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 3px;
+    .block_13_2 {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        // border-color: #C5C5C5FF;
+        background-color: #3b3b3b;
     }
 }
 </style>
