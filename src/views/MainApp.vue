@@ -13,14 +13,15 @@ import { createPinia } from 'pinia'
 import buttonPlus1 from '../components/simpleExample/Example3Vi1.vue'
 import divBlock from '../components/simpleExample/Example4,5Vi1.vue'
 import example6 from '../components/simpleExample/Example6Vi1.vue'
-import buttonDataPlus from '../components/simpleExample/Example6Vi1x.vue'
 import example7 from '../components/simpleExample/Example7Vi1.vue'
+import example16 from '../components/simpleExample/Example16Vi1.vue'
+
 import example8 from '../components/simpleExample/Example8Vi1.vue'
 import example11 from '../components/simpleExample/Example11Vi1.vue'
 import example11u2 from '../components/simpleExample/Example11Vi2.vue'
 import example13 from '../components/simpleExample/Example13Vi1.vue'
 import example13u2 from '../components/simpleExample/Example13Vi2.vue'
-import Example17 from '../components/simpleExample/Example17Vi1.vue'
+import example17x from '../components/simpleExample/Example17Vi1x.vue'
 //!SECTION
 
 //SECTION - создание переменных
@@ -350,20 +351,37 @@ let str16 = ref('')
                 </div>
             </span>
             <!-- !SECTION -->
-
-            <!-- FIXME + ========================== -->
-            <!-- ANCHOR - пример 6 -->
+            <!-- SECTION - пример 16 -->
+            <!-- ANCHOR - export default создание переменных -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
-                    пример 6
+                    пример 16
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
-                        +3
+                        exp. def. +3
                     </span>
-                    <buttonDataPlus class="GLASSlOLLIPOPS_button" />
+                    <example16 class="GLASSlOLLIPOPS_button" />
                 </div>
             </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 17 -->
+            <!-- ANCHOR - export default создание переменных -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 17
+                </span>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <span>
+                        exp. def. fun
+                    </span>
+                    <example17x class="GLASSlOLLIPOPS_button" />
+                </div>
+            </span>
+            <!-- !SECTION -->
+            
+            <!-- FIXME + ========================== -->
+             
             <!-- ANCHOR - пример 7 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
@@ -493,7 +511,7 @@ let str16 = ref('')
                 <span class="title">
                     пример 17
                 </span>
-                <Example17 />
+                <example17x />
             </span>
             <!-- ANCHOR - пример 18 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">

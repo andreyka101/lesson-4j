@@ -4,7 +4,6 @@
     </button>
 </template>
 <script lang="ts">
-// пример использования свойства data
 
 
 // export default - экспортирует в этот компонент функции 
