@@ -15,6 +15,7 @@ import divBlock from '../components/simpleExample/Example4,5Vi1.vue'
 import example6 from '../components/simpleExample/Example6Vi1.vue'
 import example7 from '../components/simpleExample/Example7Vi1.vue'
 import example16 from '../components/simpleExample/Example16Vi1.vue'
+import example17 from '../components/simpleExample/Example17Vi1.vue'
 
 import example8 from '../components/simpleExample/Example8Vi1.vue'
 import example11 from '../components/simpleExample/Example11Vi1.vue'
@@ -359,8 +360,11 @@ let str16 = ref('')
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
-                        exp. def. +3
+                        export default
                     </span>
+                    <p class="margin_none">
+                        +3
+                    </p>
                     <example16 class="GLASSlOLLIPOPS_button" />
                 </div>
             </span>
@@ -373,9 +377,9 @@ let str16 = ref('')
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
-                        exp. def. fun
+                        export default
                     </span>
-                    <example17x class="GLASSlOLLIPOPS_button" />
+                    <example17 />
                 </div>
             </span>
             <!-- !SECTION -->
@@ -563,6 +567,9 @@ h1 a:hover {
     .title {
         padding: 5px;
     }
+}
+.margin_none{
+    margin: 0;
 }
 
 
