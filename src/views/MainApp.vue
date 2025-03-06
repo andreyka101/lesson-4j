@@ -370,7 +370,7 @@ let str16 = ref('')
             </span>
             <!-- !SECTION -->
             <!-- SECTION - пример 17 -->
-            <!-- ANCHOR - export default создание переменных -->
+            <!-- ANCHOR - export default создание функций -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 17
