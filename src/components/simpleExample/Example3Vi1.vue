@@ -1,6 +1,6 @@
 
 
-<!-- LINK - Composition API - это когда script находится в файле vue (для создания реактивных переменных используем ref) -->
+<!-- LINK - Composition API - используем когда script находится в файле vue (для создания реактивных переменных используем ref) -->
 <script setup lang="ts">
 import { ref } from 'vue'
 

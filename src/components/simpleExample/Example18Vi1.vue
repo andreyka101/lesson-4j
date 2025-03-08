@@ -13,11 +13,13 @@ export default {
     // создание методов 
     methods: {
         fun() {
+            //LINK - создаём setInterval и сохраняем в локальную переменную tim
             let tim = setInterval(() => {
                 this.num--
             }, 100)
             if (this.num == 0) {
-
+                //LINK - обращаемся к локальной переменной функции без this.
+                //LINK - функция clearInterval - удаляет setInterval
                 clearInterval(tim)
             }
             // setTimeout(()=>{
