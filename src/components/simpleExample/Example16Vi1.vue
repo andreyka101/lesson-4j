@@ -3,8 +3,10 @@
         {{ num }}
     </button>
 </template>
-<script lang="ts">
 
+
+<!--  -->
+<script lang="ts">
 
 //LINK - export default - экспортирует в этот компонент функции или переменные
 export default{

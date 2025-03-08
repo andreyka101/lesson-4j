@@ -1,5 +1,9 @@
+
+
+<!-- LINK - Composition API - это когда script находится в файле vue (для создания реактивных переменных используем ref) -->
 <script setup lang="ts">
 import { ref } from 'vue'
+
 //LINK - локальная переменная этого компонента (она реактивная)
 let num = ref(0)
 
