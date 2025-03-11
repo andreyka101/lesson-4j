@@ -16,8 +16,9 @@ import example6 from '../components/simpleExample/Example6Vi1.vue'
 import example7 from '../components/simpleExample/Example7Vi1.vue'
 import example16 from '../components/simpleExample/Example16Vi1.vue'
 import example17 from '../components/simpleExample/Example17Vi1.vue'
+import example18 from '../components/simpleExample/Example18Vi1.vue'
 
-import example8 from '../components/simpleExample/Example8Vi1.vue'
+import example8 from '../components/simpleExample/Example19Vi1.vue'
 import example11 from '../components/simpleExample/Example11Vi1.vue'
 import example11u2 from '../components/simpleExample/Example11Vi2.vue'
 import example13 from '../components/simpleExample/Example13Vi1.vue'
@@ -40,9 +41,10 @@ let arr13 = ref([
     [4,5,6],
     [7,8,9],
 ]) // пример 13
-let str14 = "i text" // пример 1
-let str15_1 = '<span style="color:#ea0000">ok</span>' // пример 1
-let str15_2 = '<button v-on:click="num++" class="GLASSlOLLIPOPS_button">{{ num }}</button>' // пример 1
+let str14 = "i text" // пример 14
+let str15_1 = '<span style="color:#ea0000">ok</span>' // пример 15
+let str15_2 = '<button v-on:click="num++" class="GLASSlOLLIPOPS_button">{{ num }}</button>' // пример 15
+
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
 let url = ref('https://andreyka101.github.io/lesson-1j/')
@@ -353,7 +355,7 @@ let str16 = ref('')
             </span>
             <!-- !SECTION -->
             <!-- SECTION - пример 16 -->
-            <!-- ANCHOR - export default создание переменных -->
+            <!-- ANCHOR - export default - создание переменных -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 16
@@ -370,7 +372,7 @@ let str16 = ref('')
             </span>
             <!-- !SECTION -->
             <!-- SECTION - пример 17 -->
-            <!-- ANCHOR - export default создание функций -->
+            <!-- ANCHOR - export default - создание функций -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 17
@@ -383,25 +385,25 @@ let str16 = ref('')
                 </div>
             </span>
             <!-- !SECTION -->
-            
-            <!-- FIXME + ========================== -->
-             
-            <!-- ANCHOR - пример 7 -->
+            <!-- SECTION - пример 18 -->
+            <!-- ANCHOR - export default - создание функции time -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
-                    пример 7
+                    пример 18
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
                         пуск
                     </span>
-                    <!-- <example7 class="GLASSlOLLIPOPS_button" /> -->
+                    <example18 class="GLASSlOLLIPOPS_button" />
                 </div>
             </span>
-            <!-- ANCHOR - пример 8 -->
+            <!-- !SECTION -->
+            <!-- SECTION - пример 19 -->
+            <!-- ANCHOR - export default - Lifecycle Hooks (Хуки жизненного цикла) -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
-                    пример 8
+                    пример 19
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
@@ -410,6 +412,10 @@ let str16 = ref('')
                     <example8 class="GLASSlOLLIPOPS_button" />
                 </div>
             </span>
+            <!-- !SECTION -->
+            
+            <!-- FIXME + ========================== -->
+
             <!-- ANCHOR - пример 9 -->
             <span v-bind:class="nameClass">
                 <span class="title">

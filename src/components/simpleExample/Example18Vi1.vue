@@ -16,15 +16,13 @@ export default {
             //LINK - создаём setInterval и сохраняем в локальную переменную tim
             let tim = setInterval(() => {
                 this.num--
+                
+                if (this.num == 0) {
+                    //LINK - обращаемся к локальной переменной функции без this.
+                    //LINK - функция clearInterval - удаляет setInterval
+                    clearInterval(tim)
+                }
             }, 100)
-            if (this.num == 0) {
-                //LINK - обращаемся к локальной переменной функции без this.
-                //LINK - функция clearInterval - удаляет setInterval
-                clearInterval(tim)
-            }
-            // setTimeout(()=>{
-            //     clearInterval(tim)
-            // },1000)
         }
     }
 }
