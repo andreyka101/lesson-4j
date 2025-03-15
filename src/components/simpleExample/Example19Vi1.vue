@@ -23,7 +23,7 @@ export default {
     created() {
         console.log("create  /", Date.now())
     },
-    //LINK - beforeMount - срабатывает после Компиляции шаблонов на лету (если шаблоны есть)
+    //LINK - beforeMount - срабатывает после Компиляции шаблонов компонента (если шаблоны есть)
     beforeMount() {
         console.log("beforeMount  /", Date.now())
     },
@@ -31,14 +31,18 @@ export default {
     mounted() {
         console.log("mounted  /", Date.now())
     },
-    //LINK - beforeUpdate - срабатывает после Изменения данных этого компонента
+    //LINK - beforeUpdate - срабатывает после Изменения данных
     beforeUpdate() {
         console.log("beforeUpdate  /", Date.now())
+        console.log("beforeUpdate - num =" , this.num)
     },
-    //LINK - updated - срабатывает после повторного рендера этого компонента
+    //LINK - updated - срабатывает после Повторного рендера этого компонента уже с именёными данными
     updated() {
         console.log("updated  /", Date.now())
+        console.log("updated - num =" , this.num)
     },
+    // https://www.book2s.com/tutorials/vuejs-options-beforeunmount.html
+
     //FIXME - Когда компонент размонтируется
     //FIXME - Размонти ровано
     //LINK - beforeUnmount - срабатывает после
