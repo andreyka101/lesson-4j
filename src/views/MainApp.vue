@@ -410,6 +410,7 @@ let str16 = ref('')
                         смотри в консоль
                     </span>
                     <example8 class="GLASSlOLLIPOPS_button" />
+                    <!-- <example8 v-if="num != 3" class="GLASSlOLLIPOPS_button" /> -->
                 </div>
             </span>
             <!-- !SECTION -->

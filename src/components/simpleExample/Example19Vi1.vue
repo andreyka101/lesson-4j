@@ -45,7 +45,7 @@ export default {
 
     //FIXME - Когда компонент размонтируется
     //FIXME - Размонти ровано
-    //LINK - beforeUnmount - срабатывает после
+    //LINK - beforeUnmount - вызывается перед размонтированием (удалением из DOM)
     beforeUnmount() {
         console.log("beforeUnmount  /", Date.now())
     },
