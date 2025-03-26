@@ -17,8 +17,9 @@ import example7 from '../components/simpleExample/Example7Vi1.vue'
 import example16 from '../components/simpleExample/Example16Vi1.vue'
 import example17 from '../components/simpleExample/Example17Vi1.vue'
 import example18 from '../components/simpleExample/Example18Vi1.vue'
+import example19 from '../components/simpleExample/Example19Vi1.vue'
+import example20 from '../components/simpleExample/Example20Vi1.vue'
 
-import example8 from '../components/simpleExample/Example19Vi1.vue'
 import example11 from '../components/simpleExample/Example11Vi1.vue'
 import example11u2 from '../components/simpleExample/Example11Vi2.vue'
 import example13 from '../components/simpleExample/Example13Vi1.vue'
@@ -400,17 +401,32 @@ let str16 = ref('')
             </span>
             <!-- !SECTION -->
             <!-- SECTION - пример 19 -->
-            <!-- ANCHOR - export default - Lifecycle Hooks (Хуки жизненного цикла) -->
+            <!-- ANCHOR - export default - Lifecycle Hooks (Хуки жизненного цикла) пример 1 -->
             <span class="GLASSlOLLIPOPS_span spanFlex">
                 <span class="title">
                     пример 19
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
-                        смотри в консоль
+                        Lifecycle Hooks 1
                     </span>
-                    <example8 class="GLASSlOLLIPOPS_button" />
-                    <!-- <example8 v-if="num != 3" class="GLASSlOLLIPOPS_button" /> -->
+                    <!-- LINK - здесь удаляем кнопку внутри компонента -->
+                    <example19 />
+                </div>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 20 -->
+            <!-- ANCHOR - export default - Lifecycle Hooks (Хуки жизненного цикла) пример 2 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 20
+                </span>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <span>
+                        Lifecycle Hooks 2
+                    </span>
+                    <!-- LINK - здесь удаляем кнопку внутри компонента -->
+                    <example20 class="GLASSlOLLIPOPS_button" />
                 </div>
             </span>
             <!-- !SECTION -->

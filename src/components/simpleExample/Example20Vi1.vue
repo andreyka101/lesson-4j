@@ -2,9 +2,6 @@
     <span>
         смотри в консоль
     </span>
-    <button v-if="num != 3" id="but" @click="num++" class="GLASSlOLLIPOPS_button">
-        {{ num }}
-    </button>
 </template>
 <script lang="ts">
 // LINK - Хуки можно создавать только в Options API
