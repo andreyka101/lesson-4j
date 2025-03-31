@@ -1,10 +1,12 @@
 <template>
     <span>
-        смотри в консоль
+        смотри в консоль ({{ num }})
     </span>
 </template>
+<!-- https://stackoverflow.com/questions/71412939/vue-js-referenceerror-defineprops-is-not-defined -->
+<!-- https://ru.vuejs.org/guide/reusability/composables -->
 <script lang="ts">
-// LINK - Хуки можно создавать только в Options API
+// LINK - Хуки создаём через export default
 export default {
     data() {
         return {
@@ -44,7 +46,6 @@ export default {
         console.log("updated  /", Date.now())
         console.log("updated - num =" , this.num)
     },
-    // https://www.book2s.com/tutorials/vuejs-options-beforeunmount.html
     //LINK - beforeUnmount - вызывается перед размонтированием (перед удалением из DOM) всего компонента , а не элемента (кнопка)
     // По этому если сработает v-if кнопки этого компонента то beforeUnmount не будет вызван (мы удаляем из DOM кнопку ,а не компонент)
     // Но beforeUnmount сработает при переходе через router или при переходе на другую страницу

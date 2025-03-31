@@ -1,13 +1,13 @@
 <template>
     <span>
-        смотри в консоль
+        смотри в консоль ({{ num }})
     </span>
     <button v-if="num != 3" id="but" @click="num++" class="GLASSlOLLIPOPS_button">
         {{ num }}
     </button>
 </template>
 <script lang="ts">
-// LINK - Хуки можно создавать только в Options API
+// LINK - Хуки создаём через export default
 export default {
     data() {
         return {

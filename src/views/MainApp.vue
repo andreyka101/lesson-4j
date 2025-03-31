@@ -45,6 +45,7 @@ let arr13 = ref([
 let str14 = "i text" // пример 14
 let str15_1 = '<span style="color:#ea0000">ok</span>' // пример 15
 let str15_2 = '<button v-on:click="num++" class="GLASSlOLLIPOPS_button">{{ num }}</button>' // пример 15
+let num20 = ref(0) // пример 20
 
 let nameClass = 'GLASSlOLLIPOPS_span spanFlex'
 let yesNo = ref(false)
@@ -425,8 +426,26 @@ let str16 = ref('')
                     <span>
                         Lifecycle Hooks 2
                     </span>
-                    <!-- LINK - здесь удаляем кнопку внутри компонента -->
-                    <example20 class="GLASSlOLLIPOPS_button" />
+                    <!-- LINK - здесь удаляем весь компонент -->
+                    <example20/>
+                </div>
+            </span>
+            <!-- !SECTION -->
+            <!-- SECTION - пример 20 -->
+            <!-- ANCHOR - export default - Lifecycle Hooks (Хуки жизненного цикла) пример 2 -->
+            <span class="GLASSlOLLIPOPS_span spanFlex">
+                <span class="title">
+                    пример 20
+                </span>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <span>
+                        Lifecycle Hooks 2
+                    </span>
+                    <!-- LINK - здесь удаляем весь компонент -->
+                    <example20 v-if="num != 3" :n="num" />
+                    <button @click="num++" class="GLASSlOLLIPOPS_button">
+                        {{ num }}
+                    </button>
                 </div>
             </span>
             <!-- !SECTION -->
