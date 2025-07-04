@@ -1,1 +1,1 @@
-none
+npm create vue@latest

@@ -5,6 +5,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 // достаю router
 import router from './router'
+// import router from './router/index.ts'
 // достаю pinia
 import { createPinia } from 'pinia'
 
