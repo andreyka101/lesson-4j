@@ -16,7 +16,7 @@ import example6 from '../components/simpleExample/Example6Vi1.vue'
 import example7 from '../components/simpleExample/Example7Vi1.vue'
 import example16 from '../components/simpleExample/Example16Vi1.vue'
 import example17 from '../components/simpleExample/Example17Vi1.vue'
-import example18 from '../components/simpleExample/Example18Vi1.vue'
+import example18 from '../components/simpleExample/Example18Vi1x.vue'
 import example19 from '../components/simpleExample/Example19Vi1.vue'
 import example20 from '../components/simpleExample/Example20Vi1.vue'
 
@@ -364,7 +364,7 @@ let str16 = ref('')
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
-                        export default
+                        Options API
                     </span>
                     <p class="margin_none">
                         +3
@@ -381,7 +381,7 @@ let str16 = ref('')
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
                     <span>
-                        export default
+                        Options API
                     </span>
                     <example17 />
                 </div>
@@ -394,6 +394,9 @@ let str16 = ref('')
                     пример 18
                 </span>
                 <div style="display: flex;flex-direction: column;align-items: center;">
+                    <span>
+                        Options API
+                    </span>
                     <span>
                         пуск
                     </span>
